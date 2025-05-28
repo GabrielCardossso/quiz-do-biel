@@ -9,6 +9,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -17,6 +24,13 @@ h1 {
     margin-bottom: 30px;
     font-size: 2.5em;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    padding: 0 10px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 15px;
 }
 
 /* Estilos dos botões */
@@ -34,6 +48,8 @@ button {
     overflow: hidden;
     margin: 10px;
     min-width: 200px;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 /* Efeito hover */
@@ -105,7 +121,7 @@ button[onclick="StartQuiz()"]:hover {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    width: 100%;
+    width: 90%;
     max-width: 600px;
 }
 
@@ -217,7 +233,7 @@ button[onclick="StartQuiz()"]:hover {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    width: 100%;
+    width: 90%;
     max-width: 800px;
     flex-wrap: wrap;
 }
@@ -294,4 +310,110 @@ footer {
     background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* Media Queries para dispositivos móveis */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .difficulty-buttons {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 1em;
+        min-width: 150px;
+        margin: 5px;
+    }
+
+    .pergunta {
+        font-size: 1.1em;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    footer {
+        bottom: 10px;
+    }
+
+    .instagram-link {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}
+
+/* Media Queries para tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .difficulty-buttons {
+        padding: 20px;
+    }
+
+    button {
+        min-width: 180px;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    button {
+        min-width: 120px;
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    .difficulty-buttons {
+        padding: 10px;
+    }
+
+    .instagram-link {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+}
+
+/* Ajustes para orientação paisagem em dispositivos móveis */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .difficulty-buttons {
+        margin: 15px 0;
+    }
+
+    button {
+        padding: 8px 15px;
+        margin: 5px;
+    }
+
+    footer {
+        position: relative;
+        margin-top: 20px;
+    }
 } 
